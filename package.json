@@ -8,8 +8,7 @@
     "start:prod": "cd server && npm start",
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "heroku-postbuild": "cd client && npm run build"
+    "seed": "cd server && npm run seed"
   },
   "repository": {
     "type": "git",
@@ -22,8 +21,10 @@
   },
   "homepage": "https://github.com/VSLG2020/Redux_Store#readme",
   "dependencies": {
+    "graphql": "^15.5.0",
     "if-env": "^1.0.4",
-    "jwt-decode": "^3.1.2"
+    "react-redux": "^7.2.3",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "concurrently": "^6.0.0"
