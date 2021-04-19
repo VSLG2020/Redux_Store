@@ -1,0 +1,20 @@
+{
+  "name": "redux_store",
+  "version": "1.0.0",
+  "description": "## User Story AS a senior engineer working on an e-commerce platform I WANT my platform to use Redux to manage global state instead of the Context API SO THAT my website's state management is taken out of the React ecosystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VSLG2020/Redux_Store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VSLG2020/Redux_Store/issues"
+  },
+  "homepage": "https://github.com/VSLG2020/Redux_Store#readme",
+  "dependencies": {}
+}
