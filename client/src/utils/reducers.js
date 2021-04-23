@@ -1,4 +1,6 @@
-import { useReducer } from "react";
+//import { useReducer } from "react";
+
+//this import stays
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -11,7 +13,19 @@ import {
   TOGGLE_CART
 } from "./actions";
 
-export const reducer = (state, action) => {
+//call what was global state here 
+const defaultState = {
+  
+  products: [],
+  cart: [],
+  cartOpen: false,
+  categories: [],
+  currentCategory: '',
+
+}
+//make code fit here using defaultstate
+//export const reducer = (state, action) => {
+export const reducer = (state=defaultState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -85,6 +99,8 @@ export const reducer = (state, action) => {
   }
 };
 
-export function useProductReducer(initialState) {
-  return useReducer(reducer, initialState)
-}
+//change export
+export default reducer;
+// export function useProductReducer(initialState) {
+//   return useReducer(reducer, initialState)
+// }
