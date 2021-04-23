@@ -9,16 +9,13 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
-//import { StoreProvider } from "./utils/GlobalState";
+// import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
 // Import the Provider from react-redux
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
 //call in new utils/store file
 import store from "./utils/store";
-
-
-
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem('id_token')
@@ -30,13 +27,12 @@ const client = new ApolloClient({
   },
   uri: '/graphql',
 })
-
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Provider store={store}>
+          <Provider store = { store }>
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />

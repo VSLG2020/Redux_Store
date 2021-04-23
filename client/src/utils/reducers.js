@@ -1,4 +1,4 @@
-//import { useReducer } from "react";
+// import { useReducer } from "react";
 
 //this import stays
 import {
@@ -25,7 +25,7 @@ const defaultState = {
 }
 //make code fit here using defaultstate
 //export const reducer = (state, action) => {
-export const reducer = (state=defaultState, action) => {
+export const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {

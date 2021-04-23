@@ -5,6 +5,7 @@ import { QUERY_CHECKOUT } from "../../utils/queries"
 import { idbPromise } from "../../utils/helpers"
 import CartItem from "../CartItem";
 import Auth from "../../utils/auth";
+
 // import { useStoreContext } from "../../utils/GlobalState";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
@@ -21,15 +22,17 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 //include checkout for stripe
 
 const Cart = () => {
-  const state = useSelector ((state) => {
-    return state;
-  })
+  const state = useSelector((state) => {
+    return state
+  });
 
   const dispatch = useDispatch();
-  //const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+//const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+// const [state, dispatch] = useStoreContext();
+
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
- 
+
 
   useEffect(() => {
     if (data) {
