@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/VSLG2020/Redux_Store#readme",
   "dependencies": {
+    "graphql": "^15.5.0",
     "if-env": "^1.0.4",
     "react-redux": "^7.2.3",
     "redux": "^4.0.5"
